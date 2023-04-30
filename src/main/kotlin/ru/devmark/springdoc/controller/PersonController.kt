@@ -21,7 +21,7 @@ class PersonController {
     @Operation(summary = "Получить информацию о пользователе по его id")
     fun getPersonById(
         @Parameter(description = "id пользователя")
-        @PathVariable personId: Int,
+        @PathVariable("id") personId: Int,
 
         @Parameter(hidden = true)
         @RequestParam(required = false) flag: Boolean
